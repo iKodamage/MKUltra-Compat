@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 
 @Mod(modid = MKUltraX.MODID, name = MKUltraX.NAME, version = MKUltraX.VERSION,
-        dependencies="required-after:mkultra@[0.97,);after:thebetweenlands;after:iceandfire;after:lycanitesmobs;after:astralsorcery;" +
+        dependencies="required-after:mkultra@[0.97,);after:thebetweenlands;after:iceandfire;after:astralsorcery;" +
                 "after:basemetals;after:poweradvantage;after:betterwithmods;required-after:targeting_api")
 public class MKUltraX
 {
@@ -24,7 +24,6 @@ public class MKUltraX
     public static final String VERSION = "@VERSION@";
 
     public static IceAndFireIntegration iceAndFire;
-    public static LycanitesIntegration lycanites;
     public static AstralSorceryIntegration astralSorcery;
     public static BaseMetalsIntegration baseMetals;
     public static SpartanWeaponryIntegration spartanWeaponry;
@@ -45,9 +44,6 @@ public class MKUltraX
         }
         if (IntegrationUtils.isIceAndFirePresent()){
             integrations.add(iceAndFire = new IceAndFireIntegration());
-        }
-        if (IntegrationUtils.isLycantesPresent()){
-            integrations.add(lycanites = new LycanitesIntegration());
         }
         if (IntegrationUtils.isSpartanWeaponryPresent()){
             integrations.add(spartanWeaponry = new SpartanWeaponryIntegration());
